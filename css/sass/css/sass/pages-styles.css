@@ -68,7 +68,6 @@ body {
   font-family: shrikhand;
   font-size: 1.8em;
   font-weight: 300;
-  align-items: left;
   margin: 0;
 }
 .menu-content h2:hover {
@@ -119,12 +118,18 @@ body {
   position: relative;
   height: -moz-fit-content;
   height: fit-content;
-  transition: all 1s ease-in-out;
   animation: fade-in 5s forwards;
 }
-.menu-section .menu-card:hover {
-  transform: scale(1.15);
-  cursor: pointer;
+.menu-section .menu-card .check {
+  color: #f6f6f6;
+  border-radius: 50%;
+  font-size: 1.5em;
+  white-space: nowrap;
+  transition: all 0.5s;
+}
+.menu-section .menu-card:hover .check {
+  transform: rotate(360deg);
+  transition: all 1.5s;
 }
 .menu-section .rotate {
   display: flex;
@@ -145,18 +150,6 @@ body {
 .menu-section:active .rotate {
   width: 5em;
   transition: 500ms ease-in-out;
-}
-.menu-section .check {
-  color: #f6f6f6;
-  border-radius: 50%;
-  font-size: 1.5em;
-  white-space: nowrap;
-  transform: rotate(90deg);
-  transition: all 0.5s;
-}
-.menu-section:active .check {
-  transform: rotate(-90deg);
-  transition: all 0.5s;
 }
 
 #card-height {

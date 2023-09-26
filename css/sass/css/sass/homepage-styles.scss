@@ -3,6 +3,10 @@ $text: Roboto;
 $primary-color: #9356DC;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
+#gradient {
+    --color-stop-1: $primary-color;
+    --color-stop-2: $secondary-color
+}
 
 body {
     margin: 0px;
@@ -60,8 +64,7 @@ a{
         border-radius: 50px;
         border: none;
         margin-bottom: 7vw;
-        box-shadow: 4px 4px 2px lightgrey
-        max-width 250px;
+        box-shadow: 4px 4px 2px lightgrey;
         align-self: center;
         transition: all 1s ease-in-out;
     
@@ -105,7 +108,6 @@ h3 {
 
     .res-cards{
     display: flex;
-    align-items: left;
     flex-direction: column;
     padding-bottom: 20px;
     width: 21em;
@@ -163,13 +165,18 @@ h3 {
 .heart {
     display: grid;
 
-    &:active .icon--full {
-      color: $primary-color;
-    }
-    &:active .icon--empty {
-      color: transparent;
-    }
-  }
+    .icon--full {
+        color: $primary-color;
+    &:hover { 
+        fill: url(#gradient);
+    } }
+    .icon--empty {
+        background-color: white;
+        color: black;
+        &:hover {
+            display: none;
+    }}
+
   .fa-heart {
     position: relative !important;
     left: 0px !important;
@@ -177,7 +184,8 @@ h3 {
     cursor: pointer;
     grid-column: 1;
     grid-row: 1;
-  }}
+
+  }}}
 
 .how-it-works{
     margin-top: 2em;
@@ -341,4 +349,4 @@ footer {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
-
+    

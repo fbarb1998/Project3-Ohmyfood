@@ -78,7 +78,6 @@ $color-background: #f6f6f6;
       font-family: shrikhand;
       font-size: 1.8em;
       font-weight: 300;
-      align-items: left;
       margin: 0;
       &:hover {
         color: $primary-color;
@@ -132,13 +131,21 @@ $color-background: #f6f6f6;
       white-space: nowrap;
       position: relative;
       height: fit-content;
-      transition: all 1s ease-in-out;
       animation: fade-in 5s forwards;
     
-        &:hover {
-            transform: scale(1.15);
-            cursor: pointer;
-        }
+      .check {
+        color: $color-background;
+        border-radius: 50%;
+        font-size: 1.5em;
+        white-space: nowrap;
+        
+        transition: all 0.5s;
+      }
+  
+      &:hover .check {
+        transform: rotate(360deg);
+        transition: all 1.5s;
+      }
 
     
     }
@@ -163,20 +170,7 @@ $color-background: #f6f6f6;
         width: 5em;
         transition: 500ms ease-in-out;
       }
-  
-      .check {
-        color: $color-background;
-        border-radius: 50%;
-        font-size: 1.5em;
-        white-space: nowrap;
-        transform: rotate(90deg);
-        transition: all 0.5s;
-      }
-  
-      &:active .check {
-        transform: rotate(-90deg);
-        transition: all 0.5s;
-      }
+
     }
     #card-height {
       line-height: 100%;

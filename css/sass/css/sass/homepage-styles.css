@@ -61,7 +61,7 @@ a:visited {
   transition: all 1s ease-in-out;
 }
 .location-btn:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -105,7 +105,7 @@ h3:hover {
   transition: all 1s ease-in-out;
 }
 .restaurants .restaurants-bg .res-cards:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
   cursor: pointer;
 }
 .restaurants .card-img {
@@ -157,9 +157,10 @@ h3:hover {
 .content .heart .icon--empty {
   background-color: white;
   color: black;
+  transition: opacity 1s;
 }
 .content .heart .icon--empty:hover {
-  display: none;
+  opacity: 0;
 }
 .content .heart .fa-heart {
   position: relative !important;
@@ -227,7 +228,9 @@ h3:hover {
 .how-it-works button:hover .fa-store {
   color: #9356DC;
 }
-.how-it-works button .circle1, .how-it-works button .circle2, .how-it-works button .circle3 {
+.how-it-works button .circle1,
+.how-it-works button .circle2,
+.how-it-works button .circle3 {
   display: flex;
   align-items: center;
   position: absolute;
@@ -241,7 +244,9 @@ h3:hover {
   width: 2em;
   top: 9px;
 }
-.how-it-works button .fa-mobile-alt, .how-it-works button .fa-list, .how-it-works button .fa-store {
+.how-it-works button .fa-mobile-alt,
+.how-it-works button .fa-list,
+.how-it-works button .fa-store {
   padding-right: 1em;
   font-size: medium;
 }

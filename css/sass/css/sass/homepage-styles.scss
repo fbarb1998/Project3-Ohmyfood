@@ -3,15 +3,10 @@ $text: Roboto;
 $primary-color: #9356DC;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
+$hover: $text black;
 
-
-#gradient {
-    --color-stop-1: $primary-color;
-    --color-stop-2: $secondary-color
-}
 
 body {
-    margin: 0px;
     margin: 0 auto;
     font-family: $text, sans-serif;
 }
@@ -25,14 +20,12 @@ a {
     }
 }
 
-
-
 .header {
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
 
-    & img {
+    img {
         padding-bottom: 30px;
         padding-top: 30px;
         margin-bottom: -15px;
@@ -43,7 +36,7 @@ a {
     padding-top: 2px;
     background-color: #f6f6f6;
     text-align: center;
-    height: 22em;
+    height: 20em;
 
 
     &-nav {
@@ -51,6 +44,7 @@ a {
         border: 0.1em inset;
         height: 2.5em;
         padding-bottom: 5px;
+        text-align: center;
     }
 
     i {
@@ -77,6 +71,7 @@ a {
         transition: all 1s ease-in-out;
         width: 280px;
         height: 60px;
+        text-align: center;
 
         &:hover {
             transform: scale(1.05);
@@ -98,57 +93,59 @@ h3 {
 }
 
 .restaurants {
+    display: flex;
+    flex-direction: column;
     background-color: whitesmoke;
-    margin-top: 5em;
-    padding-top: 2em;
+    justify-content: left;
+    padding: 2em;
 
-
+    &:hover {
+        color: $primary-color;
+    }
     h2 {
+        padding-bottom: 2em;
+    }
+}
+
+
+.restaurants-bg {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+    .card {
         display: flex;
-        align-items: left;
-        justify-content: left;
-        padding-left: 2em;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-bottom: 40px;
+
+
     }
 
-    h2 {
-        &:hover {
-            color: $primary-color;
-        }
-    }
-
-    .restaurants-bg {
-
-        .card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: column;
-            padding-bottom: 40px;
-
-        }
-
-        .res-cards {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 30px;
-            width: 21em;
-            height: 13em;
-            border-radius: 1em 1em;
-            position: relative;
-            background-color: white;
-            box-shadow: 8px 8px 12px lightgray;
-            transition: all 1s ease-in-out;
-
-            &:hover {
-                transform: scale(1.05);
-                cursor: pointer;
-            }
-        }
-    }
-
-    .card-img {
+    .res-cards {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+        width: 21em;
+        height: 13em;
+        border-radius: 1em 1em;
         position: relative;
+        background-color: white;
+        box-shadow: 8px 8px 12px lightgray;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
     }
+}
+
+.card-img {
+    position: relative;
 
     img {
         object-fit: cover;
@@ -157,6 +154,7 @@ h3 {
         width: 100%;
     }
 }
+
 
 .new {
     position: absolute;
@@ -225,97 +223,100 @@ h3 {
     }
 }
 
-.how-it-works {
-    margin-top: 2em;
-    display: flex;
 
+.how-it-works {
+    display: flex;
     flex-direction: column;
     background-color: white;
     justify-content: left;
     padding-left: 2em;
+    padding-top: 2em;
+    height: 28em;
+    padding: 2em;
 
     h2 {
         padding-bottom: 13px;
-
-        &:hover {
-            color: $primary-color;
-        }
+        margin: 0 0 32px;
     }
 
-    .nav-button {
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 20em;
+    margin-top: 1em;
+    align-self: center;
+}
+
+button {
+    font-size: 1em;
+    height: 5em;
+    text-align: left;
+    outline: none;
+    border: none;
+    border-radius: 2em;
+    width: 19em;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    background-color: #f6f6f6;
+    box-shadow: 8px 8px 12px lightgrey;
+
+
+    &:hover {
+        transform: scale(1.17);
+        color: black;
+
+    }
+
+    .icon {
+        width: 12%;
+    }
+
+    &:hover {
+        background-color: lighten($primary-color, 30%);
+    }
+
+    &:hover .fa-mobile-alt {
+        color: $primary-color;
+    }
+
+    &:hover .fa-list {
+        color: $primary-color;
+    }
+
+    &:hover .fa-store {
+        color: $primary-color;
+    }
+
+    .circle1,
+    .circle2,
+    .circle3 {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        height: 20em;
-        margin-top: 1em;
-        align-self: center;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        left: -1em;
+        background-color: $primary-color;
+        border-radius: 2em;
+        color: whitesmoke;
+        font-size: 0.9em;
+        height: 2em;
+        width: 2em;
+        top: 30px;
     }
 
-    button {
-        font-size: 1em;
-        height: 5em;
-        text-align: left;
-        outline: none;
-        border: none;
-        border-radius: 2em;
-        width: 19em;
-        position: relative;
-        cursor: pointer;
-        transition: all 1s ease-in-out;
-        background-color: #f6f6f6;
-        box-shadow: 8px 8px 12px lightgrey;
-
-
-        &:hover {
-            transform: scale(1.17);
-            color: black;
-
-        }
-
-        .icon {
-            width: 12%;
-        }
-
-        &:hover {
-            background-color: lighten($primary-color, 30%);
-        }
-
-        &:hover .fa-mobile-alt {
-            color: $primary-color;
-        }
-
-        &:hover .fa-list {
-            color: $primary-color;
-        }
-
-        &:hover .fa-store {
-            color: $primary-color;
-        }
-
-        .circle1,
-        .circle2,
-        .circle3 {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            justify-content: center;
-            left: -1em;
-            background-color: $primary-color;
-            border-radius: 2em;
-            color: whitesmoke;
-            font-size: 0.9em;
-            height: 2em;
-            width: 2em;
-            top: 30px;
-        }
-
-        .fa-mobile-alt,
-        .fa-list,
-        .fa-store {
-            padding: 2em;
-            font-size: medium;
-        }
+    .fa-mobile-alt,
+    .fa-list,
+    .fa-store {
+        padding: 2em;
+        font-size: medium;
     }
 }
 
@@ -411,12 +412,30 @@ footer {
 @media (min-width: 992px) {
     .restaurants-bg {
         display: flex;
-        gap: 25px;
+        gap: 20px;
         justify-content: space-around;
         flex-wrap: wrap;
     }
-    .top-part {
-        display: flex;
-        justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+
+    .location,
+    .how-it-works,
+    .restaurants,
+    .footer {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .location,
+    .how-it-works,
+    .restaurants,
+    .footer {
+        padding-left: 400px;
+        padding-right: 400px;
     }
 }

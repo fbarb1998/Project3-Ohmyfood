@@ -15,7 +15,6 @@ body {
 }
 
 .header {
-  align-items: left;
   justify-content: left;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -58,6 +57,8 @@ body {
 }
 
 .menu-content {
+  display: flex;
+  flex-direction: column;
   background-color: #f6f6f6;
   border-radius: 2.6em 2.6em 0 0;
   position: relative;
@@ -75,7 +76,6 @@ body {
   .restaurant {
     width: 100%;
     display: flex;
-    align-items: left;
     justify-content: space-between;
   }
 
@@ -118,7 +118,6 @@ body {
 }
 
 .menu-content {
-  display: grid;
   justify-content: left;
   padding: 1em;
 }
@@ -156,8 +155,10 @@ body {
       transform: rotate(360deg);
       transition: all 1.5s;
     }
+  }
 
-
+  .menu-sections {
+    display: flex;
   }
 
   .rotate {
@@ -271,10 +272,18 @@ body {
   transition: all 1s ease-in-out;
 
   &:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     cursor: pointer;
-  }
+    background: linear-gradient(170deg, lighten($secondary-color, 5%), lighten($primary-color, 5%));
+    box-shadow: 8px 8px 12px darkgrey;
 }
+&:hover {
+  transform: scale(1.17);
+  color: black;
+
+}
+}
+
 
 .fa-heart {
   position: relative !important;
@@ -296,7 +305,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-items: left;
   gap: 0.5em;
   height: 13.5em;
   padding: 2em;
@@ -334,5 +342,12 @@ body {
   to {
     opacity: 1;
     top: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-sections {
+    display: flex;
+    gap:25px
   }
 }

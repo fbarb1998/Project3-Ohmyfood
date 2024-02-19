@@ -29,9 +29,10 @@ a:visited {
 }
 
 .location {
+  padding-top: 2px;
   background-color: #f6f6f6;
   text-align: center;
-  height: 19em;
+  height: 22em;
 }
 .location-nav {
   background-color: #e5e5e5;
@@ -44,30 +45,35 @@ a:visited {
 }
 .location-menu {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 15em;
-  padding: 0 1em;
+  padding: 2em;
 }
 .location-btn {
   background: linear-gradient(170deg, #ff79da, #9356DC);
   color: white;
   font-size: large;
   padding: 1rem;
-  border-radius: 50px;
+  border-radius: 40px;
   border: none;
   margin-bottom: 7vw;
-  box-shadow: 4px 4px 2px lightgrey;
+  box-shadow: 8px 8px 12px lightgrey;
   align-self: center;
   transition: all 1s ease-in-out;
+  width: 280px;
+  height: 60px;
 }
 .location-btn:hover {
   transform: scale(1.05);
   cursor: pointer;
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
+  box-shadow: 8px 8px 12px darkgrey;
 }
 
 h3 {
   font-weight: 400;
   font-size: 1.2em;
+  padding: 1em;
 }
 h3:hover {
   color: #9356DC;
@@ -76,11 +82,13 @@ h3:hover {
 .restaurants {
   background-color: whitesmoke;
   margin-top: 5em;
+  padding-top: 2em;
 }
 .restaurants h2 {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
+  padding-left: 2em;
 }
 .restaurants h2:hover {
   color: #9356DC;
@@ -90,18 +98,18 @@ h3:hover {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  padding-bottom: 35px;
+  padding-bottom: 40px;
 }
 .restaurants .restaurants-bg .res-cards {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   width: 21em;
-  height: 14em;
+  height: 13em;
   border-radius: 1em 1em;
   position: relative;
   background-color: white;
-  box-shadow: 8px 8px 2px lightgray;
+  box-shadow: 8px 8px 12px lightgray;
   transition: all 1s ease-in-out;
 }
 .restaurants .restaurants-bg .res-cards:hover {
@@ -115,14 +123,14 @@ h3:hover {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1em 1em 0em 0em;
-  height: 10em;
-  width: 21em;
+  height: 11em;
+  width: 100%;
 }
 
 .new {
   position: absolute;
-  left: 17.4em;
-  bottom: 7.5em;
+  left: 17em;
+  bottom: 9em;
   background-color: #99e2d0;
   color: #217460;
   padding: 0.6em 1.5em;
@@ -142,8 +150,11 @@ h3:hover {
   padding: 0 10px 10px 10px;
 }
 .content .card-text {
-  margin: 5px 14px;
+  margin: 0 14px;
   line-height: 0.5em;
+}
+.content .card-text h4 {
+  margin-top: 7px;
 }
 .content .heart {
   display: grid;
@@ -174,9 +185,10 @@ h3:hover {
 .how-it-works {
   margin-top: 2em;
   display: flex;
-  align-items: center;
   flex-direction: column;
   background-color: white;
+  justify-content: left;
+  padding-left: 2em;
 }
 .how-it-works h2 {
   padding-bottom: 13px;
@@ -189,32 +201,30 @@ h3:hover {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  height: 16em;
-  padding-left: 0.1em;
+  height: 20em;
   margin-top: 1em;
-  margin: 0 auto;
+  align-self: center;
 }
 .how-it-works button {
   font-size: 1em;
-  height: 3em;
-  text-align: center;
+  height: 5em;
+  text-align: left;
   outline: none;
   border: none;
-  border-radius: 1.25em;
-  width: 15em;
-  max-width: 250px;
+  border-radius: 2em;
+  width: 19em;
   position: relative;
   cursor: pointer;
   transition: all 1s ease-in-out;
   background-color: #f6f6f6;
-  box-shadow: 8px 8px 2px lightgray;
+  box-shadow: 8px 8px 12px lightgrey;
 }
 .how-it-works button:hover {
   transform: scale(1.17);
   color: black;
 }
 .how-it-works button .icon {
-  width: 10%;
+  width: 12%;
 }
 .how-it-works button:hover {
   background-color: #e4d5f6;
@@ -242,12 +252,12 @@ h3:hover {
   font-size: 0.9em;
   height: 2em;
   width: 2em;
-  top: 9px;
+  top: 30px;
 }
 .how-it-works button .fa-mobile-alt,
 .how-it-works button .fa-list,
 .how-it-works button .fa-store {
-  padding-right: 1em;
+  padding: 2em;
   font-size: medium;
 }
 
@@ -255,12 +265,12 @@ footer .footer {
   background-color: #4a4c4f;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
   gap: 0.5em;
   height: 13.5em;
   padding-left: 2em;
   color: darkgray;
+  padding-top: 2em;
 }
 footer .footer .footer-title {
   font-family: shrikhand, cursive;
@@ -273,7 +283,7 @@ footer .footer a {
 }
 footer .footer i {
   margin-right: 0.75em;
-  padding-right: 1em;
+  width: 20px;
 }
 footer .footer p {
   margin: 1em 0em;
@@ -325,5 +335,17 @@ footer .footer p {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media (min-width: 992px) {
+  .restaurants-bg {
+    display: flex;
+    gap: 25px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .top-part {
+    display: flex;
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=homepage-styles.css.map */

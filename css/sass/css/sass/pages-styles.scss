@@ -53,7 +53,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  animation: fade-in 2000ms forwards;
+  // /animation: fade-in 2000ms forwards;
 }
 
 .menu-content {
@@ -118,7 +118,8 @@ body {
 }
 
 .menu-content {
-  justify-content: left;
+  // justify-content: left;
+  align-items: center;
   padding: 1em;
 }
 
@@ -139,8 +140,9 @@ body {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    height: fit-content;
-    animation: fade-in 5s forwards;
+    height: fit-content; // duplicate
+    animation: fade-in 1s forwards;
+    width: 350px;
 
     .check {
       color: $color-background;
@@ -152,9 +154,35 @@ body {
     }
 
     &:hover .check {
-      transform: rotate(360deg);
-      transition: all 1.5s;
+      // transform: rotate(360deg);
+      // transition: all 1.5s;
     }
+
+    @keyframes check-rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    &:hover .text-wrap {
+      width: 50%;
+
+      p {
+        color: black;
+      }
+    }
+  }
+
+  .second-card {
+    animation-delay: 100ms;
+  }
+
+  .third-card {
+    animation-delay: 200ms;
+  }
+
+  .fourth-card {
+    animation-delay: 300ms;
   }
 
   .menu-sections {
@@ -173,17 +201,6 @@ body {
     overflow: hidden;
     transition: 500ms ease-in-out;
   }
-
-  &:active .rotate {
-    width: 5em;
-    transition: 500ms ease-in-out;
-  }
-
-  &:active .rotate {
-    width: 5em;
-    transition: 500ms ease-in-out;
-  }
-
 }
 
 #card-height {
@@ -198,32 +215,10 @@ body {
   line-height: 1em;
   transition: width 500ms ease-in-out;
 
-  &:hover {
-    transition: width 500ms ease-in-out;
-    width: 56%;
-  }
-
-  &:hover {
-    transition: width 500ms ease-in-out;
-    width: 56%;
-  }
-
-
   p {
     overflow: hidden;
     white-space: nowrap;
-
-    &:hover {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-
-    &:hover {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
+    text-overflow: ellipsis;
   }
 }
 
@@ -240,8 +235,6 @@ body {
 }
 
 .menu-subtitle {
-  width: 100%;
-
   h4 {
     white-space: nowrap;
     font-weight: 400;
@@ -276,12 +269,13 @@ body {
     cursor: pointer;
     background: linear-gradient(170deg, lighten($secondary-color, 5%), lighten($primary-color, 5%));
     box-shadow: 8px 8px 12px darkgrey;
-}
-&:hover {
-  transform: scale(1.17);
-  color: black;
+  }
 
-}
+  &:hover {
+    transform: scale(1.17);
+    color: black;
+
+  }
 }
 
 
@@ -336,7 +330,7 @@ body {
 @keyframes fade-in {
   from {
     opacity: 0;
-    top: 100px;
+    top: 50px;
   }
 
   to {
@@ -348,6 +342,8 @@ body {
 @media (min-width: 768px) {
   .menu-sections {
     display: flex;
-    gap:25px
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

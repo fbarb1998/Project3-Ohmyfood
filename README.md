@@ -1,10 +1,12 @@
 # Project3-Ohmyfood
+
+Github Page: https://github.com/fbarb1998/Project3-Ohmyfood
 Page Link: https://fbarb1998.github.io/Project3-Ohmyfood/
 
 Assignment Steps:
 
 1. Review Information:
-Read the email from Sarah, the CTO, and review the provided mockups and design specifications.
+   Read the email from Sarah, the CTO, and review the provided mockups and design specifications.
 
 2.Define Main Sections:
 Use pen and paper to outline the main sections of the page, considering components like the header, accommodation cards, filters, and more.

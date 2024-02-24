@@ -42,7 +42,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  animation: fade-in 2000ms forwards;
 }
 
 .menu-content {
@@ -98,7 +97,7 @@ body {
 }
 
 .menu-content {
-  justify-content: left;
+  align-items: center;
   padding: 1em;
 }
 
@@ -121,7 +120,8 @@ body {
   position: relative;
   height: -moz-fit-content;
   height: fit-content;
-  animation: fade-in 5s forwards;
+  animation: fade-in 1s forwards;
+  width: 350px;
 }
 .menu-section .menu-card .check {
   color: #f6f6f6;
@@ -130,9 +130,25 @@ body {
   white-space: nowrap;
   transition: all 0.5s;
 }
-.menu-section .menu-card:hover .check {
-  transform: rotate(360deg);
-  transition: all 1.5s;
+@keyframes check-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.menu-section .menu-card:hover .text-wrap {
+  width: 50%;
+}
+.menu-section .menu-card:hover .text-wrap p {
+  color: black;
+}
+.menu-section .second-card {
+  animation-delay: 100ms;
+}
+.menu-section .third-card {
+  animation-delay: 200ms;
+}
+.menu-section .fourth-card {
+  animation-delay: 300ms;
 }
 .menu-section .menu-sections {
   display: flex;
@@ -149,14 +165,6 @@ body {
   overflow: hidden;
   transition: 500ms ease-in-out;
 }
-.menu-section:active .rotate {
-  width: 5em;
-  transition: 500ms ease-in-out;
-}
-.menu-section:active .rotate {
-  width: 5em;
-  transition: 500ms ease-in-out;
-}
 
 #card-height {
   line-height: 100%;
@@ -170,24 +178,7 @@ body {
   line-height: 1em;
   transition: width 500ms ease-in-out;
 }
-.text-wrap:hover {
-  transition: width 500ms ease-in-out;
-  width: 56%;
-}
-.text-wrap:hover {
-  transition: width 500ms ease-in-out;
-  width: 56%;
-}
 .text-wrap p {
-  overflow: hidden;
-  white-space: nowrap;
-}
-.text-wrap p:hover {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.text-wrap p:hover {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -204,9 +195,6 @@ body {
   transition: width 500ms ease-in-out;
 }
 
-.menu-subtitle {
-  width: 100%;
-}
 .menu-subtitle h4 {
   white-space: nowrap;
   font-weight: 400;
@@ -291,7 +279,7 @@ body {
 @keyframes fade-in {
   from {
     opacity: 0;
-    top: 100px;
+    top: 50px;
   }
   to {
     opacity: 1;
@@ -302,5 +290,7 @@ body {
   .menu-sections {
     display: flex;
     gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }/*# sourceMappingURL=pages-styles.css.map */

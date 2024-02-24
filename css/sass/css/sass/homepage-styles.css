@@ -83,7 +83,7 @@ h3:hover {
   padding: 2em;
 }
 .restaurants:hover {
-  color: #9356DC;
+  color: black;
 }
 .restaurants h2 {
   padding-bottom: 2em;
@@ -200,7 +200,7 @@ h3:hover {
   margin: 0 0 32px;
 }
 .how-it-works:hover {
-  color: #9356DC;
+  color: black;
 }
 
 .nav-button {
@@ -228,7 +228,6 @@ button {
   box-shadow: 8px 8px 12px lightgrey;
 }
 button:hover {
-  transform: scale(1.17);
   color: black;
 }
 button .icon {

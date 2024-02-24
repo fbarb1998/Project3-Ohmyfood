@@ -100,8 +100,9 @@ h3 {
     padding: 2em;
 
     &:hover {
-        color: $primary-color;
+        color: black;
     }
+
     h2 {
         padding-bottom: 2em;
     }
@@ -240,7 +241,7 @@ h3 {
     }
 
     &:hover {
-        color: $primary-color;
+        color: black;
     }
 }
 
@@ -270,7 +271,7 @@ button {
 
 
     &:hover {
-        transform: scale(1.17);
+        // transform: scale(1.1);
         color: black;
 
     }

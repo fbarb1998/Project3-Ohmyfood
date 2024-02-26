@@ -88,9 +88,6 @@ body {
     font-weight: 300;
     margin: 0;
 
-    &:hover {
-      color: $primary-color;
-    }
   }
 
   .card-Restaurants {
@@ -151,7 +148,7 @@ body {
       white-space: nowrap;
     }
 
-    &:hover .check  {
+    &:hover .check {
       animation: check-rotate 1s forwards;
     }
 
@@ -275,19 +272,35 @@ body {
   }
 }
 
+.heart {
+  display: grid;
 
-.fa-heart {
-  position: relative !important;
-  left: 0px !important;
-  font-size: 1.5em;
-  cursor: pointer;
-  grid-column: 1;
-  grid-row: 1;
-  transition: all 1s ease-in-out;
+  .icon--full {
+    color: $primary-color;
 
-  &:hover {
-    transform: scale(1.5);
+    &:hover {
+      fill: url(#gradient);
+    }
+  }
+
+  .icon--empty {
+    background-color: white;
+    color: black;
+    transition: opacity 1s;
+
+    &:hover {
+      opacity: 0;
+    }
+  }
+
+  .fa-heart {
+    position: relative !important;
+    left: 0px !important;
+    font-size: 1.5em;
     cursor: pointer;
+    grid-column: 1;
+    grid-row: 1;
+
   }
 }
 

@@ -149,13 +149,10 @@ body {
       border-radius: 50%;
       font-size: 1.5em;
       white-space: nowrap;
-
-      transition: all 0.5s;
     }
 
-    &:hover .check {
-      // transform: rotate(360deg);
-      // transition: all 1.5s;
+    &:hover .check  {
+      animation: check-rotate 1s forwards;
     }
 
     @keyframes check-rotate {
